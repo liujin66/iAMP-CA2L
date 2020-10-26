@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iAMP-CA2L Server</title>
+    <link href="../static/src/main.css" rel="stylesheet" type="text/css">
+    <style>
+        html {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+            background: #fff;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .body_content {
+            width: 900px;
+            height: 500px;
+            position: absolute;
+            background-color: white;
+            left: 35%;
+            margin-left: -200px;
+            top: 35%;
+            margin-top: -200px;
+        }
+
+        .box {
+            float: left;
+            padding: 35px 0 0;
+            width: 650px;
+            color: black;
+        }
+
+        .info {
+            border: 1px solid #e0e0e0;
+            background: #f4f4f4;
+            padding: 20px;
+            width: 864px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            position: relative;
+            clear: both;
+        }
+
+        .col {
+            width: 290px;
+            padding: 5px;
+            #border: 1px solid #e0e0e0;
+            background: white;
+        }
+
+        /* @group info */
+
+        div.info {
+            border: 1px solid #e0e0e0;
+            background: #f4f4f4;
+            padding: 20px;
+            width: 864px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            position: relative;
+            clear: both;
+        }
+
+        .info .right {
+            float: right;
+            margin: 0 55px 0 0;
+        }
+
+        .info .main {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 120%;
+        }
+
+        .info a {
+            font-style: italic;
+            color: #454545;
+            font-weight: bold;
+            font-size: 105%;
+            text-decoration: none;
+            font-variant: normal;
+        }
+
+        .info a:hover {
+            text-shadow: silver 1px 1px 1px;
+        }
+
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #FFFFCC;
+            border: 1px solid #CCCCCC;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #003333;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        .file:hover {
+            background: blanchedalmond;
+            color: #b3b2b2;
+            text-decoration: none;
+        }
+
+        .col1 {
+            position: absolute;
+            top: 850px;
+            padding: 1px 1px 1px;
+            width: 900px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            background: #e0e0e0;
+        }
+
+        .col2 {
+            position: absolute;
+            top: 750px;
+            padding: 2px 2px 2px;
+            width: 900px;
+            border-radius: 6px;
+            border: 2px solid #e0e0e0;
+            background: #e0e0e0;
+        }
+
+        .Seq_input {
+            position: relative;
+            display: inline-block;
+            background: #FFFFCC;
+            border: 1px solid #CCCCCC;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #003333;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+
+        .Seq_input:hover {
+            background: blanchedalmond;
+            color: #b3b2b2;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="body_content">
+    <div id="header">
+        <h1><a class="red" href="./">iAMP-CA2L Server</a></h1>
+        <ul id="menu">
+            <li class="active"><a href="./" title="iAMP-CA2L Server">iAMP-CA2L</a></li>
+            <li><a href="./download" target="_blank" title="download">download</a></li>
+            <li><a href="./Pse_help" target="_blank" title="Help">Help</a></li>
+            <!--<li><a href="./tutorial" title="Tutorial">Tutorial</a></li>-->
+        </ul>
+    </div>
+    <div class="box">
+        <h2>
+            <font size="5" color="#dc143c">
+                Welcome to <em title="iAMP-CA2L">iAMP-CA2L Server</em>
+            </font>
+        </h2>
+        <p style="font-size:17px;width:900px">
+            A two-layer predictor for identifying antimicrobial peptides and their functional types.
+        </p>
+    </div>
+    <div class="info">
+        <div id="info1">
+            <p style="font-size:15px" class="main">Intput sequence</p>
+            <p style="font-size:15px">After the user submits a sequence
+                (<a href="./Pse_example" target="_blank" title="example" style="color:blue">example</a>))
+                ,click the Submit Sequence button, and the final prediction result will be directly displayed on the web page.
+                <a href="./Pse_help" title="help">More info...</a></p>
+        </div>
+        <div>
+            <form method="post" style="margin_left:100px" action="upload_seq">
+                <textarea id="Seq_cadd" name="Seq_cadd" cols="120" rows="15" wrap="hard" style="resize:none"></textarea>
+                <div align="center" class="coll">
+                    <input class="Seq_input" type="submit" value=" Submit Sequence ">
+                    &nbsp;&nbsp;&nbsp;
+                    <input class="Seq_input" type="reset" value=" Reset Sequence ">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="footer" style="font-size:15px">
+
+        <p align="center">Xiao Lab:Bioinformatic Team (<a href="http://www.jci-bioinfo.cn/">Xiao Lab</a>)
+            ----------------------------------------------------Contact: 532606318@qq.com</a></p>
+
+    </div>
+</div>
+
+<canvas id="canvas"></canvas>
+<script src="../static/src/index.js"></script>
+
+</body>
+</html>

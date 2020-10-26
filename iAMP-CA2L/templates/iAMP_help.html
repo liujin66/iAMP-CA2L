@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>iAMP-CA2L Server</title>
+    <link href="../static/src/main.css" rel="stylesheet" type="text/css">
+    <!--<link rel="icon" href="{{ url_for('static', filename='../static/favicon.ico') }}">-->
+    <style>
+        html {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+            background: #fff;
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .body_content {
+            width: 900px;
+            height: 300px;
+            position: absolute;
+            background-color: white;
+            left: 35%;
+            margin-left: -200px;
+            top: 35%;
+            margin-top: -200px;
+        }
+
+        div.info {
+            border: 1px solid #e0e0e0;
+            background: #f4f4f4;
+            padding: 20px;
+            width: 864px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            position: relative;
+            clear: both;
+        }
+
+        .info .right {
+            float: right;
+            margin: 0 55px 0 0;
+        }
+
+        .info .main {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 120%;
+        }
+
+        .info a {
+            font-style: italic;
+            color: #454545;
+            font-weight: bold;
+            font-size: 105%;
+            text-decoration: none;
+            font-variant: normal;
+        }
+
+        .info a:hover {
+            text-shadow: silver 1px 1px 1px;
+        }
+
+    </style>
+</head>
+<body>
+<div align="center" class="body_content">
+    <div id="header">
+        <h1><a class="red" href="./">iAMP-CA2L Server</a></h1>
+        <ul id="menu">
+            <li class="active"><a href="./" title="iPTT(2L)-CNN Server">iAMP-CA2L</a></li>
+            <li><a href="./download" title="download">download</a></li>
+            <li><a href="./Pse_help" title="Help">Help</a></li>
+            <!--<li><a href="./tutorial" title="Tutorial">Tutorial</a></li>-->
+        </ul>
+    </div>
+    <div class="info">
+        <h3 class="underlined" align="left">iAMP-CA2L Server User Guide</h3>
+        <p></p>
+        <div id="introduction" align="left">
+            <p class="main">Descript</p>
+            <p>
+             iAMP-CA2L is a two-layer classifier. The first layer is used to determine whether an unknown peptide is an antimicrobial peptide, and the second layer is used to determine the specific function of an antimicrobial peptide.</p>
+        </div>
+        <!--<div id="Intput_seq" align="left">-->
+        <!--<p class="main">Intput sequence</p>-->
+        <!--<p>Users can submit a multi-label sequence-->
+        <!--(<a href="./Pse_example" target="_blank" title="example" style="color:blue">example</a>))-->
+        <!--of a protein family for the simulated evolution of proteins.-->
+        <!--The model predicts attributes according to the sequence of user-->
+        <!--input and returns the predicted results to the web interface.-->
+        <!--</p>-->
+        <!--</div>-->
+        <div id="Intput_file" align="left">
+            <p class="main">Intput sequence</p>
+            <p>After the user submits a sequence, click the Submit Sequence button, and the final prediction result will be directly displayed on the web page.
+            </p>
+            <p class="main">Content description</p>
+            <p> (Antibacterial,Antiviral,Antiparasital,Anti-HIV,Anticancer(antitumor),anti-MRSA,Antifungal,anti-endotoxin,Antibiofilm,Chemotactic)
+</p>
+        </div>
+    </div>
+    <div id="footer" style="font-size:15px">
+        <p align="center">Xiao Lab:Bioinformatic Team (<a href="http://www.jci-bioinfo.cn/">Xiao Lab</a>)
+            ----------------------------------------------------Contact: 532606318@qq.com</a></p>
+    </div>
+</div>
+<canvas id="canvas"></canvas>
+<script src="../static/src/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

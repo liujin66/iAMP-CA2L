@@ -1,0 +1,293 @@
+/*
+	project: web application template
+	author: luka cvrk (www.solucija.com)
+*/
+
+*{ margin: 0; padding: 0; }*
+body { margin: 50px 0 0; font: .74em "Trebuchet MS", Arial, Sans-Serif; color: #3d3d3d; }
+	h1 { font-size: 3em; font-weight: normal; float: left; }
+	h1 a { text-decoration: none; }
+	h2 { font-size: 2em; color: #FFF2B3; font-weight: normal; margin: 0 0 .8em; }
+	h3 { font-size: 1.5em;
+	border-bottom: 1px dotted #d9d8d5;
+	padding-bottom: 3px;
+}
+
+
+h4{
+	margin-top: 35px;
+	margin-bottom: 15px;
+	color: #494949;
+	font-family: 'HelveticaNeue-Light','HelveticaNeue', 'Helvetica Neue','Arial','sans-serif';
+	font-size: 28px;
+	line-height: 44px;
+}
+.bold{
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+.underlined{
+	border-bottom: 2px solid #494949;
+}
+	p  { margin: 0 0 1em 0; line-height: 1.8em;}
+	em { border-bottom: 1px dotted #fff; cursor: pointer; }
+	.selec { cursor: pointer;
+	font-weight: bold;
+	font-style: italic;
+	color: #fff;
+}
+	img { border: 0; }
+	.red { color: #663333; }
+	a.emph{color: white; }
+.wrap { width: 900px; margin: 0 auto;
+	height: auto;
+	min-height: 100%;
+}
+
+#frame {
+	border-bottom: 20px solid #fff;
+}
+#block{
+	width: 900px;
+	background-color: #fff;
+	margin: 3px auto 2px;
+	padding-top: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+#header { width: 900px; height: 50px; margin: 0 auto; }
+	#menu  { float: right; padding: 6px 0 0 0; list-style: none; }
+		#menu li { display: inline; }
+		#menu a { display: block; float: left; margin-left: 30px; padding: 7px; text-decoration: none; font-size: 13px; color: #000000; }
+		#menu a:hover { color: #000; border-bottom: 2px solid #ccc; }
+		#menu .active a { border-bottom: 2px solid #C70012;color: #9D2900;}
+
+#teaser { clear: both; background: #051821; }
+	.box { float: left; padding: 66px 0 0; width: 480px; color: #C7E3EE; }
+	#image { float: right; width: 388px; position: relative; top: 2px;  height: 258px; }
+
+.bar { height: 40px; margin: 0 0 20px; padding: 8px 0 0 0; }
+	.step { cursor: pointer; color: #b8b8b8; padding: 4px 0 0 11px; margin: 0 35px 0 0; font-size: 1.4em; float: left; text-align: center; height: 30px; list-style-type: none; }
+	.step a {margin: 0 10px 0 0; }
+	.step em { cursor: pointer; border-bottom: 1px dotted;font-weight: bold;color: #f9fff5;}
+	.step:hover{color: #f9fff5;}
+
+.col {float: left; width: 32%; padding: 5px;
+	margin-bottom: 20px;
+}
+
+span.examp{
+	position: relative;
+	top: 4px;
+}
+a.examp{
+
+	font-style: italic;
+	color: #868686;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+
+a.examp:hover{
+	text-shadow: silver 1px 1px 1px;
+}
+
+/* @group info */
+
+div.info {
+	border: 1px solid #e0e0e0;
+	background: #f4f4f4;
+	padding: 20px;
+	width: 864px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	position: relative;
+	clear: both;
+}
+.info .right { float: right; margin: 0 55px 0 0;}
+
+.info .main {
+	font-weight: bold;
+	font-style: italic;
+	font-size: 120%;
+}
+.info a{
+	font-style: italic;
+	color: #454545;
+	font-weight: bold;
+	font-size: 105%;
+	text-decoration: none;
+	font-variant: normal;
+}
+.info a:hover{
+	text-shadow: silver 1px 1px 1px;
+}
+
+/* @end */
+
+#footer { clear: both; width: 870px; padding: 15px; border-top: 50px solid #e0e0e0;  margin-right: auto; margin-left: auto; margin-top: 20px;}
+	#footer .right { float: right; margin: 0 55px 0 0; }
+	#footer a { color: #808080; font-weight: bold; }
+
+/* @group Capas ocultas */
+
+#capaalignment{
+	display: none;
+}
+#capaalignment2{
+	display: none;
+}
+#capatree2{
+	display: none;
+}
+#capatree{
+	display: none;
+}
+#menu2{
+	display: none;
+}
+#menu3{
+	display: none;
+}
+#info2{
+	display: none;
+}
+#info3{
+	display: none;
+}
+
+/* @end */
+
+
+
+/* @group Submit */
+
+.submitbox {
+	clear: both;
+	width: 864px;
+	background-color: #cfd2cd;
+	color: #000;
+	padding: 10px 30px;
+	position: relative;
+	margin: 20px auto;
+}
+.emphsubmit{
+	font: normal bold 120% sans-serif;
+	white-space: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.submit{
+	font: 80% sans-serif;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 15px;
+}
+
+/* @end */
+
+/* @group Error */
+
+div.error {
+	width: 864px;
+	background-color: #ece6c9;
+	padding: 20px;
+	color: #000;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #d9dc74;
+	position: relative;
+	clear: both;
+	margin-bottom: 20px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 120%;
+}
+ul.error{
+	color: #000;
+	list-style-type: disc;
+	white-space: normal;
+	margin-top: 10px;
+	margin-left: 40px;
+	font-weight: normal;
+	font-style: normal;
+}
+li.error{
+	margin-top: 5px;
+	font-size: 80%;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* @end */
+
+input{
+	color: #898989;
+}
+input:focus{
+	color: #000;
+}
+textarea{
+	color: #898989;
+}
+textarea:focus{
+	color: #000;
+}
+p.help{
+	display: inline;
+	color: #999;
+	font-size: .9em;
+	margin-left: 10px;
+}
+
+#mail{
+	position: relative;
+	top: 6px;
+}
+
+/* @advanced */
+
+#parameters{
+	display: none;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#parameters .col{
+	width: 45%;
+	padding: 10px;
+}
+#parameters h3{
+	font-size: 14px;
+}
+#parameters span{
+	margin-left: 2px;
+	font-size: 13px;
+}
+.param{
+	height: 30px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+}
+.param span{
+	position: relative;
+	vertical-align: middle;
+}
+#parameters .comment{
+	font-size: 10px;
+	color: gray;
+	margin-left: 8px;
+}
+.lclear{
+	float: left;
+	clear: left;
+}
+#advtitle{
+	margin-left: 10px;
+}
+/* @end */
